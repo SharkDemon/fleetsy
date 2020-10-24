@@ -1,0 +1,4 @@
+ ____  ____  _  _   __   __ _  _  _   __    ___  __ _  ____    ____   __  ____   __  
+(    \(  __)( \/ ) /  \ (  ( \/ )( \ / _\  / __)(  / )/ ___)  (___ \ /  \(___ \ /  \   Fleetsy, a submission for Demonhacks 2020 by Rory Dickinson
+ ) D ( ) _) / \/ \(  O )/    /) __ (/    \( (__  )  ( \___ \   / __/(  0 )/ __/(  0 )  CockroachDB on Spring Data JDBC ${application.formatted-version}
+(____/(____)\_)(_/ \__/ \_)__)\_)(_/\_/\_/ \___)(__\_)(____/  (____) \__/(____) \__/   powered by Spring Boot ${spring-boot.formatted-version}
