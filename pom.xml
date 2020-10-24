@@ -17,6 +17,9 @@
 
 	<properties>
 		<java.version>11</java.version>
+        <flyway.url>jdbc:postgresql://localhost:26257/fleetsy?ssl&#61;true&#38;sslmode&#61;disable</flyway.url>
+        <flyway.user>fleetsy_app</flyway.user>
+        <flyway.password></flyway.password>
 	</properties>
 
 	<dependencies>
@@ -73,6 +76,10 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+            </plugin>
 		</plugins>
 	</build>
 
