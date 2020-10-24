@@ -2,7 +2,7 @@
 
 Fleetsy is a simple web application to help organizations manage their vehicle fleets, and is my submission for Demonhacks 2020.
 
-Fleetsy was made using Spring Boot, Flyway, and CockroachDB.
+The backend was made with Java 11 and Spring Boot 2.3.4. Flyway was used to populate a 3-node CockroachDB cluster. The frontend was created with Thymeleaf and Bootstrap 4.5.3.
 
 TODOs
 * Add CRUD support for Organizations
