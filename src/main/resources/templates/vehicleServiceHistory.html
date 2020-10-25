@@ -7,6 +7,28 @@
         <div class="jumbotron">
             <h1>Vehicle Service History</h1>
             <p class="lead">The complete service history for vehicle VIN <b><span th:text="${vehicle.vin}"></span></b> is listed below.</p>
+			<form>
+			  <div class="form-group row">
+			    <label for="staticVin" class="col-sm-2 col-form-label">VIN</label>
+			    <div class="col-sm-4">
+			      <input type="text" readonly class="form-control-plaintext" id="staticVin" th:value="${vehicle.vin}">
+			    </div>
+                <label for="staticMileage" class="col-sm-2 col-form-label">Current Mileage</label>
+                <div class="col-sm-4">
+                  <input type="text" readonly class="form-control-plaintext" id="staticMileage" th:value="${#numbers.formatInteger(vehicle.mileage, 1, 'COMMA')}">
+                </div>
+			  </div>
+			  <div class="form-group row">
+			    <label for="staticColor" class="col-sm-2 col-form-label">Color</label>
+			    <div class="col-sm-4">
+			      <input type="text" class="form-control-plaintext" id="staticColor" th:value="${vehicle.color}">
+			    </div>
+                <label for="staticMakeModel" class="col-sm-2 col-form-label">Make/Model</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control-plaintext" id="staticMakeModel" th:value="${vehicle.make+' '+vehicle.model}">
+                </div>
+			  </div>
+			</form>
         </div>
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,8 +53,8 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Service Date</th>
-                            <th scope="col">Mileage</th>
-                            <th scope="col">Service</th>
+                            <th scope="col" class="text-center">Mileage at Service</th>
+                            <th scope="col">Service Performed</th>
                             <th scope="col">Service Provider</th>
                             <th scope="col">Cost</th>
                         </tr>
@@ -40,7 +62,7 @@
                     <tbody>
                         <tr th:each="sh : ${serviceHistories}">
                             <td th:text="${#dates.format(sh.convertedServiceDate,'yyyy-MMMM-dd')}">Vehicle Service Date</td>
-                            <td th:text="${#numbers.formatInteger(sh.mileage, 1, 'COMMA')}" class="text-right">Vehicle Mileage</td>
+                            <td th:text="${#numbers.formatInteger(sh.mileage, 1, 'COMMA')}" class="text-center">Vehicle Mileage</td>
                             <td th:text="${sh.serviceDesc}">Service Description</td>
                             <td th:text="TBD">Service Provider</td>
                             <td th:text="${#numbers.formatCurrency(sh.cost)}" class="text-right">Service Cost</td>

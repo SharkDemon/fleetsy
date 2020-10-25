@@ -34,7 +34,7 @@
 	                        <th scope="col">Color</th>
 	                        <th scope="col">Make</th>
 	                        <th scope="col">Model</th>
-	                        <th scope="col">Mileage</th>
+	                        <th scope="col" class="text-center">Mileage</th>
 	                    </tr>
 	                </thead>
 	                <tbody>
@@ -43,7 +43,7 @@
 	                        <td th:text="${v.color}">Vehicle Color</td>
 	                        <td th:text="${v.make}">Vehicle Make</td>
 	                        <td th:text="${v.model}">Vehicle Model</td>
-	                        <td th:text="${#numbers.formatInteger(v.mileage, 1, 'COMMA')}" class="text-right">Vehicle Mileage</td>
+	                        <td th:text="${#numbers.formatInteger(v.mileage, 1, 'COMMA')}" class="text-center">Vehicle Mileage</td>
 	                    </tr>
 	                </tbody>
 	            </table>
