@@ -2,9 +2,14 @@
 
 Fleetsy is a simple web application to help organizations manage their vehicle fleets, and is my submission for Demonhacks 2020.
 
-The backend was made with Java 11 and Spring Boot 2.3.4. Flyway was used to populate a 3-node [CockroachDB](https://www.cockroachlabs.com/) cluster. The frontend was created with [Thymeleaf](https://www.thymeleaf.org/) and [Bootstrap](https://getbootstrap.com/).
+## Technologies Used
 
-TODOs
+The backend was made with Java 11, Spring Boot 2.3.4, and Spring Data. Flyway was used to populate a 3-node [CockroachDB](https://www.cockroachlabs.com/) cluster. The frontend was created in HTML/CSS using [Thymeleaf](https://www.thymeleaf.org/) and [Bootstrap](https://getbootstrap.com/).
+
+## TODOs
+
+Of course lots more can be accomplished, but omitted for time.
+
 * Add CRUD support for Organizations
 * Add simple UI for Organizations
 * Add CRUD support for Vehicles
@@ -17,3 +22,5 @@ TODOs
 * Organization authentication
 * Add favicon
 * Add organization logo to Vehicles page
+* Add fields for Vehicle license plate information (state, number)
+* Add optional field for Vehicle city license sticker
