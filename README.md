@@ -15,3 +15,5 @@ TODOs
 * Add Dockerfile for fleetsynet
 * More elaborate indexes for searching Vehicles
 * Organization authentication
+* Add favicon
+* Add organization logo to Vehicles page
