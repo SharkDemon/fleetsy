@@ -1,12 +1,14 @@
 package com.rd.demon.fleetsy.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import org.springframework.stereotype.Service;
 
+import com.rd.demon.fleetsy.model.Vehicle;
 import com.rd.demon.fleetsy.repositories.VehicleRepository;
 
 @Service
@@ -16,6 +18,10 @@ public class VehicleService {
 
     public VehicleService(VehicleRepository vehicleRepository) {
         this.vehicleRepo = vehicleRepository;
+    }
+
+    public Optional<Vehicle> findById(UUID vehicleId) {
+        return vehicleRepo.findById(vehicleId);
     }
 
     public List<Object> findByOrganizationId(UUID orgId) {

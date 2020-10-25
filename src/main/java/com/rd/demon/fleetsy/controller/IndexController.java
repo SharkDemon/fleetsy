@@ -1,5 +1,7 @@
 package com.rd.demon.fleetsy.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +18,11 @@ public class IndexController {
     }
 
     @GetMapping("/")
-    public String showIndex(Model model) {
+    public String showIndex(
+            HttpSession session,
+            Model model) {
+
+        session.removeAttribute("currentOrg");
         model.addAttribute("orgs", orgService.findAll());
         return "index";
     }

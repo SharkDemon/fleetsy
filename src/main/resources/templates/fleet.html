@@ -5,18 +5,18 @@
     <div th:replace="fragments/header :: header"></div>
     <main role="main" class="container">
         <div class="jumbotron">
-            <h1>Your Fleet</h1>
-            <p class="lead">The vehicles comprising your fleet are listed below.</p>
+            <h1 th:text="${currentOrg.name}">Organization Name</h1>
+            <p class="lead">The <b><span th:text="${vehicles.size()}"></span></b> vehicles comprising your fleet are listed below.</p>
         </div>
         <div>
 		    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		        <ul class="navbar-nav mr-auto">
-		          <li class="nav-item active">
+		          <li class="nav-item">
 		            <a class="nav-link" th:href="@{/}" href="#">Home</a>
 		          </li>
-		          <li class="nav-item">
-		            <a class="nav-link" href="#">Vehicles</a>
+		          <li class="nav-item active">
+		            <a class="nav-link" th:href="@{/fleet}" href="#">Vehicles</a>
 		          </li>
                   <li class="nav-item">
                     <a class="nav-link" th:href="@{/service-providers}" href="#">Service Providers</a>
@@ -39,7 +39,7 @@
 	                </thead>
 	                <tbody>
 	                    <tr th:each="v : ${vehicles}">
-	                        <td th:text="${v.vin}">Vehicle VIN</td>
+	                        <td><a th:href="@{/vehicleServiceHistory(vId=${v.id})}" href="#"><span th:text="${v.vin}">Vehicle VIN</span></a></td>
 	                        <td th:text="${v.color}">Vehicle Color</td>
 	                        <td th:text="${v.make}">Vehicle Make</td>
 	                        <td th:text="${v.model}">Vehicle Model</td>
