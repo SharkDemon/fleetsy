@@ -15,7 +15,7 @@
                   <li class="nav-item">
                     <a class="nav-link" th:href="@{/}" href="#">Home</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" th:if="${renderVehiclesLink}">
                     <a class="nav-link" th:href="@{/fleet}" href="#">Vehicles</a>
                   </li>
                   <li class="nav-item active">
