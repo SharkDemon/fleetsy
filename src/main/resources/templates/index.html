@@ -6,10 +6,23 @@
     <main role="main" class="container">
         <div class="jumbotron">
             <h1>Welcome to Fleetsy</h1>
-            <p class="lead">Fleetsy can help you manage your organization's fleet of vehicles.</p>
+            <p class="lead">Fleetsy can help you manage your organization's fleet of vehicles.  Select an organization to manage below.</p>
         </div>
         <div>
-            <p>Select an organization to manage:</p>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/}" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" th:href="@{/service-providers}" href="#">Service Providers</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+        <div>
             <ul>
                 <li th:each="org : ${orgs}"><a th:href="@{/fleet(orgId=${org.id})}" href="#"><span th:text="${org.name}">Organization Name</span></a></li>
             </ul>
