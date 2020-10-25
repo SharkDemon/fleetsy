@@ -24,3 +24,4 @@ Of course lots more can be accomplished, but omitted for time.
 * Add organization logo to Vehicles page
 * Add fields for Vehicle license plate information (state, number)
 * Add optional field for Vehicle city license sticker
+* Sortable columns for the Service History page
