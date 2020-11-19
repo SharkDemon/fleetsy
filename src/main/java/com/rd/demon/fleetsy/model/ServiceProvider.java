@@ -13,7 +13,8 @@ import lombok.Data;
 public class ServiceProvider {
 
     @Id @GeneratedValue
-    private UUID id;
+    private Long id;
+    private UUID uuid;
     private String name;
     private String phone;
     private String city;

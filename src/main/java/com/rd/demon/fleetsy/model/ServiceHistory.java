@@ -18,11 +18,12 @@ import lombok.Data;
 public class ServiceHistory {
 
     @Id @GeneratedValue
-    private UUID id;
+    private Long id;
+    private UUID uuid;
     @Column(name="vehicle_id")
-    private UUID vehicleId;
+    private Long vehicleId;
     @Column(name="service_provider_id")
-    private UUID serviceProviderId;
+    private Long serviceProviderId;
     @Column(name="service_date")
     private LocalDateTime serviceDate;
     @Column(name="service_desc")

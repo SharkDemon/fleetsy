@@ -1,7 +1,6 @@
 package com.rd.demon.fleetsy.controller;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,7 +32,7 @@ public class FleetController {
 
     @GetMapping("/fleet")
     public String showFleetForOrganization(
-            @RequestParam(name="orgId") Optional<UUID> orgId,
+            @RequestParam(name="orgId") Optional<Long> orgId,
             @ModelAttribute("currentOrg") Organization currentOrganization,
             Model model) {
 

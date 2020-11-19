@@ -2,7 +2,6 @@ package com.rd.demon.fleetsy.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -28,8 +27,8 @@ public class OrganizationService {
                 .collect(Collectors.toList());
     }
 
-    public Optional<Organization> findById(UUID uuid) {
-        return orgRepo.findById(uuid);
+    public Optional<Organization> findById(Long id) {
+        return orgRepo.findById(id);
     }
 
     public Organization save(Organization organization) {

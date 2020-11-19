@@ -14,9 +14,10 @@ import lombok.Data;
 public class Vehicle {
 
     @Id @GeneratedValue
-    private UUID id;
+    private Long id;
+    private UUID uuid;
     @Column(name="org_id")
-    private UUID organizationId;
+    private Long organizationId;
     private String color;
     private String make;
     private String model;

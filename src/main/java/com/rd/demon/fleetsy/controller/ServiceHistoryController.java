@@ -1,7 +1,5 @@
 package com.rd.demon.fleetsy.controller;
 
-import java.util.UUID;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,7 +35,7 @@ public class ServiceHistoryController {
 
     @GetMapping("/vehicleServiceHistory")
     public String showServiceHistoryForVehicle(
-            @RequestParam("vId") UUID vehicleId,
+            @RequestParam("vId") Long vehicleId,
             @ModelAttribute("currentOrg") Organization currentOrganization,
             @ModelAttribute("currentVehicle") Vehicle currentVehicle,
             Model model) {
