@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.rd.demon.fleetsy.service.OrganizationService;
 
 @Controller
-public class IndexController {
+public class IndexController extends BaseController {
 
     private final OrganizationService orgService;
 

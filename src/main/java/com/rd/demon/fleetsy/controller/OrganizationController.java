@@ -16,7 +16,7 @@ import com.rd.demon.fleetsy.model.Organization;
 import com.rd.demon.fleetsy.service.OrganizationService;
 
 @RepositoryRestController
-public class OrganizationController {
+public class OrganizationController extends BaseController {
 
     private final OrganizationService organizationService;
 

@@ -15,7 +15,7 @@ import com.rd.demon.fleetsy.service.VehicleService;
 
 @Controller
 @SessionAttributes("currentOrg")
-public class FleetController {
+public class FleetController extends BaseController {
 
     private final OrganizationService orgService;
     private final VehicleService vehicleService;

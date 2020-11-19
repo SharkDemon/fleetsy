@@ -14,7 +14,7 @@ import com.rd.demon.fleetsy.service.VehicleService;
 
 @Controller
 @SessionAttributes({"currentOrg", "currentVehicle"})
-public class ServiceHistoryController {
+public class ServiceHistoryController extends BaseController {
 
     private final VehicleService vehicleService;
     private final ServiceHistoryService serviceHistoryService;
