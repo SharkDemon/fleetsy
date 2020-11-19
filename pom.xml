@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.rd.demon</groupId>
 	<artifactId>fleetsy</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>fleetsy</name>
 	<description>Demonhacks 2020 entry</description>
