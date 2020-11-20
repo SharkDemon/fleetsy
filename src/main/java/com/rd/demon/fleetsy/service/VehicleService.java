@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.rd.demon.fleetsy.model.Vehicle;
@@ -13,6 +14,7 @@ import com.rd.demon.fleetsy.repositories.VehicleRepository;
 @Service
 public class VehicleService {
 
+    @Autowired
     private final VehicleRepository vehicleRepo;
 
     public VehicleService(VehicleRepository vehicleRepository) {

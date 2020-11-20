@@ -6,16 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.rd.demon.fleetsy.service.ServiceProviderService;
-
 @Controller
 public class ServiceProviderController extends BaseController {
-
-    private final ServiceProviderService providerService;
-
-    public ServiceProviderController(ServiceProviderService serviceProviderService) {
-        this.providerService = serviceProviderService;
-    }
 
     @GetMapping("/service-providers")
     public String showServiceProviders(Model model, HttpSession session) {

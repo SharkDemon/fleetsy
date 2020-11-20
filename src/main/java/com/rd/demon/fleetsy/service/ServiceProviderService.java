@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import com.rd.demon.fleetsy.repositories.ServiceProviderRepository;
 @Service
 public class ServiceProviderService {
 
+    @Autowired
     private final ServiceProviderRepository providerRepo;
 
     private final Sort SORT_BY_NAME_ASC = Sort.by("name").ascending();

@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,7 @@ import com.rd.demon.fleetsy.repositories.OrganizationRepository;
 @Service
 public class OrganizationService {
 
+    @Autowired
     private final OrganizationRepository orgRepo;
 
     private final Sort SORT_BY_NAME_ASC = Sort.by("name").ascending();

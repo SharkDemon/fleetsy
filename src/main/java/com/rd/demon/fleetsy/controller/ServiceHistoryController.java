@@ -9,20 +9,10 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.rd.demon.fleetsy.model.Organization;
 import com.rd.demon.fleetsy.model.Vehicle;
-import com.rd.demon.fleetsy.service.ServiceHistoryService;
-import com.rd.demon.fleetsy.service.VehicleService;
 
 @Controller
 @SessionAttributes({"currentOrg", "currentVehicle"})
 public class ServiceHistoryController extends BaseController {
-
-    private final VehicleService vehicleService;
-    private final ServiceHistoryService serviceHistoryService;
-
-    public ServiceHistoryController(VehicleService vehicleService, ServiceHistoryService serviceHistoryService) {
-        this.vehicleService = vehicleService;
-        this.serviceHistoryService = serviceHistoryService;
-    }
 
     @ModelAttribute("currentOrg")
     public Organization currentOrg() {
