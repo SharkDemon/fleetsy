@@ -1,6 +1,8 @@
 package com.rd.demon.fleetsy.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -14,7 +16,13 @@ import com.rd.demon.fleetsy.service.VehicleService;
 
 @Controller
 @SessionAttributes({"appInfo", "currentOrg"})
+@PropertySource("classpath:main.properties")
 public class BaseController {
+
+    @Value("${app.title}")
+    private String appTitle;
+    @Value("${app.hackathon}")
+    private String appHackathon;
 
     @Autowired
     protected OrganizationService orgService;
@@ -28,8 +36,8 @@ public class BaseController {
     @ModelAttribute("appInfo")
     public AppInfo applicationInfo() {
         return AppInfo.builder()
-                .title("Fleetsy")
-                .hackathon("Demonhacks 2020")
+                .title(appTitle)
+                .hackathon(appHackathon)
                 .build();
     }
 
