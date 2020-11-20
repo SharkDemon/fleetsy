@@ -17,7 +17,7 @@ import com.rd.demon.fleetsy.service.VehicleService;
 @Controller
 @SessionAttributes({"appInfo", "currentOrg"})
 @PropertySource("classpath:main.properties")
-public class BaseController {
+public class BaseController implements ViewConstants {
 
     @Value("${app.title}")
     private String appTitle;

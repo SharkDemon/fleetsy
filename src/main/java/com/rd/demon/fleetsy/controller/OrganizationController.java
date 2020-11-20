@@ -6,6 +6,8 @@ import java.net.URI;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +18,8 @@ import com.rd.demon.fleetsy.model.Organization;
 
 @RepositoryRestController
 public class OrganizationController extends BaseController {
+
+    private static final Logger logger = LoggerFactory.getLogger(OrganizationController.class);
 
     @RequestMapping(method=POST, value="/organizations")
     public @ResponseBody ResponseEntity<?> createOrganization(@RequestBody Organization org, HttpServletRequest req) {

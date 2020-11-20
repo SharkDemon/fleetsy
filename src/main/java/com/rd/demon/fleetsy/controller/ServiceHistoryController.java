@@ -1,5 +1,7 @@
 package com.rd.demon.fleetsy.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +15,8 @@ import com.rd.demon.fleetsy.model.Vehicle;
 @Controller
 @SessionAttributes({"currentVehicle"})
 public class ServiceHistoryController extends BaseController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ServiceHistoryController.class);
 
     @ModelAttribute("currentVehicle")
     public Vehicle currentVehicle() {
@@ -28,7 +32,7 @@ public class ServiceHistoryController extends BaseController {
 
         model.addAttribute("vehicle", vehicleService.findById(vehicleId).get());
         model.addAttribute("serviceHistories", serviceHistoryService.findByVehicleId(vehicleId));
-        return "vehicleServiceHistory";
+        return VIEW_SERVICE_HISTORY;
     }
 
 }

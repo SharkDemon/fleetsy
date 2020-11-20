@@ -2,6 +2,8 @@ package com.rd.demon.fleetsy.controller;
 
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,8 @@ import com.rd.demon.fleetsy.model.Organization;
 @Controller
 @SessionAttributes("currentOrg")
 public class FleetController extends BaseController {
+
+    private static final Logger logger = LoggerFactory.getLogger(FleetController.class);
 
     @GetMapping("/fleet")
     public String showFleetForOrganization(
@@ -36,7 +40,7 @@ public class FleetController extends BaseController {
         }
 
         model.addAttribute("vehicles", vehicleService.findByOrganizationId( ((Organization)model.getAttribute("currentOrg")).getId() ));
-        return "fleet";
+        return VIEW_FLEET;
     }
 
 }
