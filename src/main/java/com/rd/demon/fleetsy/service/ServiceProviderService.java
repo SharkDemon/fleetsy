@@ -13,14 +13,10 @@ import com.rd.demon.fleetsy.repositories.ServiceProviderRepository;
 @Service
 public class ServiceProviderService {
 
-    @Autowired
-    private final ServiceProviderRepository providerRepo;
-
     private final Sort SORT_BY_NAME_ASC = Sort.by("name").ascending();
 
-    public ServiceProviderService(ServiceProviderRepository serviceProviderRepository) {
-        this.providerRepo = serviceProviderRepository;
-    }
+    @Autowired
+    private ServiceProviderRepository providerRepo;
 
     public List<Object> findAll() {
         return StreamSupport.stream(providerRepo.findAll(SORT_BY_NAME_ASC).spliterator(), false)

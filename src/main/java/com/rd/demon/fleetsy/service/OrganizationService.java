@@ -15,14 +15,10 @@ import com.rd.demon.fleetsy.repositories.OrganizationRepository;
 @Service
 public class OrganizationService {
 
-    @Autowired
-    private final OrganizationRepository orgRepo;
-
     private final Sort SORT_BY_NAME_ASC = Sort.by("name").ascending();
 
-    public OrganizationService(OrganizationRepository organizationRepository) {
-        this.orgRepo = organizationRepository;
-    }
+    @Autowired
+    private OrganizationRepository orgRepo;
 
     public List<Object> findAll() {
         return StreamSupport.stream(orgRepo.findAll(SORT_BY_NAME_ASC).spliterator(), false)

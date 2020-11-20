@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.rd.demon.fleetsy.model.AppInfo;
+import com.rd.demon.fleetsy.model.Organization;
 import com.rd.demon.fleetsy.service.OrganizationService;
 import com.rd.demon.fleetsy.service.ServiceHistoryService;
 import com.rd.demon.fleetsy.service.ServiceProviderService;
 import com.rd.demon.fleetsy.service.VehicleService;
 
 @Controller
-@SessionAttributes({"appInfo"})
+@SessionAttributes({"appInfo", "currentOrg"})
 public class BaseController {
 
     @Autowired
@@ -30,6 +31,11 @@ public class BaseController {
                 .title("Fleetsy")
                 .hackathon("Demonhacks 2020")
                 .build();
+    }
+
+    @ModelAttribute("currentOrg")
+    public Organization currentOrg() {
+        return null;
     }
 
 }

@@ -15,11 +15,6 @@ import com.rd.demon.fleetsy.model.Organization;
 @SessionAttributes("currentOrg")
 public class FleetController extends BaseController {
 
-    @ModelAttribute("currentOrg")
-    public Organization currentOrg() {
-        return null;
-    }
-
     @GetMapping("/fleet")
     public String showFleetForOrganization(
             @RequestParam(name="orgId") Optional<Long> orgId,

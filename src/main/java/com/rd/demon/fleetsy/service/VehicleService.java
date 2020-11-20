@@ -15,11 +15,7 @@ import com.rd.demon.fleetsy.repositories.VehicleRepository;
 public class VehicleService {
 
     @Autowired
-    private final VehicleRepository vehicleRepo;
-
-    public VehicleService(VehicleRepository vehicleRepository) {
-        this.vehicleRepo = vehicleRepository;
-    }
+    private VehicleRepository vehicleRepo;
 
     public Optional<Vehicle> findById(Long vehicleId) {
         return vehicleRepo.findById(vehicleId);

@@ -11,13 +11,9 @@ import com.rd.demon.fleetsy.model.Organization;
 import com.rd.demon.fleetsy.model.Vehicle;
 
 @Controller
-@SessionAttributes({"currentOrg", "currentVehicle"})
+@SessionAttributes({"currentVehicle"})
 public class ServiceHistoryController extends BaseController {
 
-    @ModelAttribute("currentOrg")
-    public Organization currentOrg() {
-        return null;
-    }
     @ModelAttribute("currentVehicle")
     public Vehicle currentVehicle() {
         return null;

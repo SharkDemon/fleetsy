@@ -12,11 +12,7 @@ import com.rd.demon.fleetsy.repositories.ServiceHistoryRepository;
 public class ServiceHistoryService {
 
     @Autowired
-    private final ServiceHistoryRepository serviceHistoryRepo;
-
-    public ServiceHistoryService(ServiceHistoryRepository serviceHistoryRepository) {
-        this.serviceHistoryRepo = serviceHistoryRepository;
-    }
+    private ServiceHistoryRepository serviceHistoryRepo;
 
     public List<ServiceHistory> findByVehicleId(Long vehicleId) {
         return serviceHistoryRepo.findByVehicleId(vehicleId);
