@@ -1,5 +1,7 @@
 # Fleetsy
 
+[![HitCount](http://hits.dwyl.com/SharkDemon/fleetsy.svg)](http://hits.dwyl.com/SharkDemon/fleetsy)
+
 Fleetsy is a simple web application to help organizations manage their vehicle fleets, and is my submission for Demonhacks 2020.
 
 ## Technologies Used
